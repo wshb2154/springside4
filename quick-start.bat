@@ -7,7 +7,7 @@ set MAVEN_OPTS=%MAVEN_OPTS% -XX:MaxPermSize=128M
 
 echo [Step 1] Install all springside modules to local maven repository.
 cd modules
-call %MVN% clean install
+call %MVN% clean install -DskipTests
 if errorlevel 1 goto error
 
 echo [Step 2] run boot-api project in dev mode.
